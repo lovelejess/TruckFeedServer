@@ -18,4 +18,11 @@ class Server < Sinatra::Base
     }.to_json
 
   end
+
+    get '/truck_list.json' do
+      content_type :json
+      {:trucks => ["Powered By Fries","Outside Scoop", "The Spot", "Ferinheit Wood Oven Pizza", "Let's Toast", "Parlo Pizza", "Karam's Grill", "Street Eats DSM"]}.to_json
+    end
+
+  end
 end
