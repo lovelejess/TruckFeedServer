@@ -1,6 +1,7 @@
 {
   "name": "TruckFeedServer",
   "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
   },
   "env": {
     "LANG": {
