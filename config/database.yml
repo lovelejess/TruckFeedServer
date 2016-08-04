@@ -1,7 +1,22 @@
+#development:
+#  adapter: sqlite3
+#  database: db/development.sqlite3
+#
+#test:
+#  adapter: sqlite3
+#  database: db/test.sqlite3
+
 development:
-  adapter: sqlite3
-  database: db/development.sqlite3
+  adapter: postgresql
+  database: db/development
 
 test:
-  adapter: sqlite3
-  database: db/test.sqlite3
+  adapter: postgresql
+  database: db/test
+
+
+production:
+  adapter: postgresql
+  database: db/production
+  pool: 5
+  timeout: 5000
