@@ -1,8 +1,15 @@
-default: &default
+development:
   adapter: postgresql
-  encoding: unicode
-  # For details on connection pooling, see rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: 5
+  database: db/trucks
 
-#host: localhost
+test:
+  adapter: postgresql
+  database: db/test
+
+production:
+  adapter: postgresql
+  database: db/production
+  pool: 5
+  timeout: 5000
+
+host: localhost
