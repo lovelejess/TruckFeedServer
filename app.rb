@@ -27,4 +27,3 @@ class App < Sinatra::Base
     @truck.to_json
   end
 end
-
