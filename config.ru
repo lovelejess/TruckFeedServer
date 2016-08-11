@@ -1,3 +1,3 @@
-require './server'
+require './app'
 
-run Server
+run App

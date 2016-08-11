@@ -1,0 +1,14 @@
+development:
+  adapter: postgresql
+  database: db/trucks
+  host: localhost
+  
+test:
+  adapter: postgresql
+  database: db/test
+
+production:
+  adapter: postgresql
+  database: db/production
+  pool: 5
+  timeout: 5000
