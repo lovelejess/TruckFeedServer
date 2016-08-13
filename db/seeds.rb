@@ -1,7 +1,7 @@
 # Truck.create!
 
 truck_list = [
-    [ 'The Spot', 'Fresh, made-to-owner sandwiches', 'the_spot.jpg' ],
+    [ 'The Spot', 'Fresh, made-to-order sandwiches', 'the_spot.jpg' ],
     [ 'The Outside Scoop', 'Ice Cream', 'outside_scoop.jpg' ]
 ]
 

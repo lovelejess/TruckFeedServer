@@ -10,7 +10,7 @@ class App < Sinatra::Base
   end
 
   get '/' do
-    p 'Hello!'
+    p 'Hello! You\'re visiting the TruckFeedServer. API documentation soon to come'
   end
 
   get '/trucks/?' do
