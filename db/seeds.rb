@@ -1,8 +1,8 @@
 # Truck.create!
 
 truck_list = [
-    [ 'The Spot', 'Fresh, made-to-owner sandwiches', 'the_spot.png' ],
-    [ 'The Outside Scoop', 'Ice Cream', 'outside_scoop.png' ]
+    [ 'The Spot', 'Fresh, made-to-owner sandwiches', 'the_spot.jpg' ],
+    [ 'The Outside Scoop', 'Ice Cream', 'outside_scoop.jpg' ]
 ]
 
 truck_list.each do |name, description_type, image|
