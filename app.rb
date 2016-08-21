@@ -18,7 +18,7 @@ class App < Sinatra::Base
     p 'Hello! You\'re visiting the TruckFeedServer. API documentation soon to come'
   end
 
-  get '/trucks/?' do
+  get '/trucks/all?' do
     @trucks = Trucks.all
     @trucks.to_json
   end
@@ -28,11 +28,13 @@ class App < Sinatra::Base
     @truck.to_json
   end
 
+  get '/trucks/schedules/all/?' do
+    @truck_schedules = TruckSchedules.all
+    @truck_schedules.to_json
+  end
 
   get '/trucks/schedules/:truck_id/?' do
     @truck_schedule = TruckSchedules.find(params[:truck_id])
     @truck_schedule.to_json
-   end
+  end
 end
-
-
