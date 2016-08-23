@@ -1,6 +1,7 @@
 {
   "name": "TruckFeedServer",
   "scripts": {
+    "postdeploy": "heroku run rake db:migrate && heroku ps:scale web=1 && heroku restart"
   },
   "env": {
     "LANG": {
