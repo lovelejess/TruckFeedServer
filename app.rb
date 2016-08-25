@@ -1,7 +1,12 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 
-class Truck < ActiveRecord::Base
+class Trucks < ActiveRecord::Base
+  has_many :truck_schedules, :class_name => 'TruckSchedule',  :foreign_key => 'truck_id', :dependent => :destroy
+end
+
+class TruckSchedules <ActiveRecord::Base
+  belongs_to :trucks
 end
 
 class App < Sinatra::Base
@@ -13,17 +18,23 @@ class App < Sinatra::Base
     p 'Hello! You\'re visiting the TruckFeedServer. API documentation soon to come'
   end
 
-  get '/trucks/?' do
-    @trucks = Truck.all
+  get '/trucks/all?' do
+    @trucks = Trucks.all
     @trucks.to_json
-
-    # [{"truck":{"description_type":"Fresh, made-to-owner sandwiches","id":1,"image_url":"the_spot.png","name":"The Spot"}},{"truck":{"description_type":"Ice Cream","id":2,"image_url":"outside_scoop.png","name":"The Outside Scoop"}}]
-
-    # {"trucks":[{"truck":{"name":"Powered By Fries","type":"Belgian fries","image":"powered_by_fries.png","price":"$"}},{"truck":{"name":"Outside Scoop","type":"Ice Cream","image":"the_outside_scoop.jpg","price":"$"}},{"truck":{"name":"The Spot","type":"Fresh, made-to-order sandwiches","image":"the_spot.jpg","price":"$"}},{"truck":{"name":"Ferinheit Wood Oven Pizza","type":"Wood Oven Pizza","image":"ferinheit_pizza.jpg","price":"$"}}]}
   end
 
   get '/trucks/:id/?' do
-    @truck = Truck.find_by_id(params[:id])
+    @truck = Trucks.find(params[:id])
     @truck.to_json
+  end
+
+  get '/trucks/schedules/all/?' do
+    @truck_schedules = TruckSchedules.all
+    @truck_schedules.to_json
+  end
+
+  get '/trucks/schedules/:truck_id/?' do
+    @truck_schedule = TruckSchedules.find(params[:truck_id])
+    @truck_schedule.to_json
   end
 end
