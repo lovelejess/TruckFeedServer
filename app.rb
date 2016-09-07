@@ -34,7 +34,8 @@ class App < Sinatra::Base
   end
 
   get '/trucks/schedules/:truck_id/?' do
-    @truck_schedule = TruckSchedules.find(params[:truck_id])
+    @truck_schedule = TruckSchedules.where(truck_id: params[:truck_id])
     @truck_schedule.to_json
   end
+  
 end
