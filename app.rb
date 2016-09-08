@@ -28,6 +28,11 @@ class App < Sinatra::Base
     @truck.to_json
   end
 
+  get '/truck' do
+    @truck_name = Trucks.where(name: params[:name])
+    @truck_name.to_json
+  end
+
   get '/trucks/schedules/all/?' do
     @truck_schedules = TruckSchedules.all
     @truck_schedules.to_json
@@ -37,5 +42,5 @@ class App < Sinatra::Base
     @truck_schedule = TruckSchedules.where(truck_id: params[:truck_id])
     @truck_schedule.to_json
   end
-  
+
 end
