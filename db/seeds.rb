@@ -14,7 +14,7 @@ truck_schedule_list = [
     ]
 
 truck_list.each do |name, description_type, image|
-  Trucks.create( name: name, description_type: description_type, image_url: image )
+  Trucks.create(name: name, description_type: description_type, image_url: image )
 end
 
 truck_schedule_list.each do |truck_id, truck_name, month, week_day, date_number, time, location|
