@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 20160819021853) do
   enable_extension "plpgsql"
 
   create_table "truck_schedules", force: :cascade do |t|
-    t.string "truck_id",    null: false
-    t.string "truck_name"
+    t.string "truck_id"
+    t.string "truck_name",  null: false
     t.string "month"
     t.string "week_day"
     t.string "date_number"
