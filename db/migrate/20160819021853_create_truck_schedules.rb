@@ -6,8 +6,11 @@ class CreateTruckSchedules < ActiveRecord::Migration[5.0]
       t.string :month
       t.string :week_day
       t.string :date_number
-      t.string :time
+      t.string :start_time
+      t.string :end_time
       t.string :location
+      t.string :street_address
+      t.string :city_state
       t.timestamp
     end
   end
