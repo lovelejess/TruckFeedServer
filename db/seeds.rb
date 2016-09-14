@@ -7,10 +7,10 @@ truck_list = [
 ]
 
 truck_schedule_list = [
-    [1, 'The Outside Scoop', 'February', 'Sunday', '3', '2:00PM', '4:00PM' 'Sculpture Garden Park', '1330 Grand Ave', 'Des Moines, IA' ],
+    [1, 'The Outside Scoop', 'February', 'Sunday', '3', '2:00PM', '4:00PM', 'Sculpture Garden Park', '1330 Grand Ave', 'Des Moines, IA' ],
     [1, 'The Outside Scoop', 'February', 'Sunday','3', '4:00PM', '9:00PM', '80/35 Festival', '1330 Grand Ave', 'Des Moines, IA'],
     [2, 'The Spot','February', 'Monday', '7', '12:00PM', '2:00PM', 'Western Gateway Park', '1330 Grand Ave', 'Des Moines, IA'],
-    [2, 'The Spot','February', 'Monday', '7', '4:00PM', '5:00PM' '515 Brewery', '7700 UNIVERSITY AVE', 'CLIVE, IA']
+    [2, 'The Spot','February', 'Monday', '7', '4:00PM', '5:00PM', '515 Brewery', '7700 UNIVERSITY AVE', 'CLIVE, IA']
     ]
 
 truck_list.each do |name, description_type, image|

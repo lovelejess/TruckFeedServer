@@ -17,12 +17,15 @@ ActiveRecord::Schema.define(version: 20160819021853) do
 
   create_table "truck_schedules", force: :cascade do |t|
     t.string "truck_id"
-    t.string "truck_name",  null: false
+    t.string "truck_name",     null: false
     t.string "month"
     t.string "week_day"
     t.string "date_number"
-    t.string "time"
+    t.string "start_time"
+    t.string "end_time"
     t.string "location"
+    t.string "street_address"
+    t.string "city_state"
   end
 
   create_table "trucks", force: :cascade do |t|
