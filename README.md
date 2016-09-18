@@ -19,6 +19,14 @@ heroku ps:scale web=1
 heroku restart --remote <REMOTE APP NAME>
 ```
 
+### Running Migrations on PR build:
+```
+git remote add PR <PR-URL>
+ ```
+then follow steps for Deploying to Heroku (above)
+
+*PR-URL looks something like this: https://git.heroku.com/damp-escarpment-86736-pr-15.git
+
 ### Useful Heroku Commands:
 ```
 heroku logs --remote <REMOTE APP NAME>
