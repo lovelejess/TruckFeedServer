@@ -14,7 +14,7 @@ bundle exec rake db:seed
 ### Deploying to Heroku:
 ```
 heroku rake db:migrate --remote <REMOTE APP NAME>
-heorku rake db:seed --remote <REMOTE APP NAME>
+heroku rake db:seed --remote <REMOTE APP NAME>
 heroku ps:scale web=1
 heroku restart --remote <REMOTE APP NAME>
 ```
