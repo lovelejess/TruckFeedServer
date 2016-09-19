@@ -46,5 +46,4 @@ class App < Sinatra::Base
     @truck_schedules.to_json
   end
 
-
 end

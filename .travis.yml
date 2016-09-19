@@ -1,0 +1,12 @@
+language: ruby
+rvm:
+ - 2.2
+ - jruby
+ - rbx-2 
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: eL1mtR9zofukAuBSh6T8rqT21SC7TBjwCKEgB3Oaxw/xcW4FmKbLJv//dy6zOnBJxxpYq81q6ZKa95VE2hizlRgAkRqWpobO/nhHS89u0L7zjFW1pt9rlld4q9A0l+/OW6WxjWPkxRMvzTA5DbH62Zbxc5segzyMz9eSCN97c7UfFB+m4kmUXWxZNfpdG6Zt9Izf3gldQjem+U1PSXLPn4kfiOHZthaezNvrAh8FeQy5dAd7Y5f4hWniQ3digh3tvsAKCS5/EqT9NGnUWCtieCVQMSyBz+kDKRGnkp7Z3L6f1rojrwHv9Z8dwwETlm2U/3K0WxZako/fWMpWVwFy5jcOvcbr120ANQhdchMDY529wts4GT/wgkNAjkOk9HMznWEKyhXwTKwOlJHDLrbXXaCo3htIQxMx0V+ABnPIZqXK1iYWhgyFtswJw2B3QfofueDj/pp5KpW0Hqd2oVoZuMC6v3HdLE4BqNdl2jY8+H82F0Lc1K78OWMBtFDRcymuynStVuKZNdDF7AvKvTxLTgjrzCQLqDr+KYjUb+bie7meQvZt02W4IgeRwNiHGj/NnG64flJWUlE+TR/omBZzRyIdM9TRMLJvcOfA+iekMHOv34b0RoWZyEYCM/IdUtndu30XX/iGEWNxl2oHVA4FAtxgKDeBQst6uNvShwtmrvo=
+  on:
+    all_branches: true
