@@ -1,7 +1,8 @@
 language: ruby
 rvm:
  - 2.2.2
- - jruby 
+ - jruby
+ - rbx-2 
 
 deploy:
   provider: heroku
