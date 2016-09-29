@@ -3,9 +3,11 @@ before_install:
 language: ruby
 rvm:
  - 2.2.2
- - jruby
- - rbx-2 
 
+sudo: false
+before_install: gem update --remote bundler
+install:
+ - bundle install --retry=3
 deploy:
   provider: heroku
   api_key:
