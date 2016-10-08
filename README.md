@@ -1,4 +1,5 @@
 # TruckFeedServer
+[!Build Status](https://travis-ci.org/lovelejess/TruckFeedServer.svg?branch=master)](https://travis-ci.org/lovelejess/TruckFeedServer)
 https://damp-escarpment-86736.herokuapp.com/
 
 ### Running Postgres locally::
