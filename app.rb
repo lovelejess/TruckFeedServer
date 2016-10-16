@@ -10,8 +10,21 @@ class TruckSchedules <ActiveRecord::Base
 end
 
 class App < Sinatra::Base
+
   before do
     content_type :json
+  end
+
+  helpers do
+
+    def json_pretty_print(data)
+      if !data
+        return status 204
+      else
+        JSON.pretty_generate(JSON.load(data.to_json)) + '\n'
+      end
+    end
+
   end
 
   get '/' do
@@ -46,5 +59,33 @@ class App < Sinatra::Base
     @truck_schedules.to_json
   end
 
+  #/truck/schedules
+  # HOW TO POST:
+  #
+  # Use postman to POST to truck/schedules
+  #
+  # In the HEADERS: Accept: application/json
+  # Content-Type: application/json
+  #
+  # In the BODY: Select raw and make sure the text type is JSON
+  #
+  # use http://www.jsonlint.com/ to verify JSON
+  #
+  # {"truck_id":"2","truck_name":"The Spot","month":"October","week_day":"Sunday","date_number":"9","start_time":"8:00PM","end_time":"10:00PM","location":"BubbaDSM","street_address":"200 10th St","city_state":"Des Moines, IA"}
+
+  post '/truck/schedules' do
+    p 'Received json'
+    data = JSON.parse(request.body.read)
+    p "JSON: #{data.inspect}"
+
+    @schedule = TruckSchedules.new(data)
+    p 'Attempting to save'
+
+    if @schedule.save
+      json_pretty_print @schedule
+    else
+        p 'Failed to save'
+    end
+  end
 
 end
