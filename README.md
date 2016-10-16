@@ -23,7 +23,7 @@ heroku restart --remote <REMOTE APP NAME>
 
 ### Running Migrations on PR build:
 ```
-ci/db_migration.sh pr <PR-URL>
+ci/db_migrate.sh pr <PR-URL>
 ```
  *PR-URL looks something like this: https://git.heroku.com/damp-escarpment-86736-pr-15.git
 
