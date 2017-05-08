@@ -3,9 +3,8 @@ class CreateTruckSchedules < ActiveRecord::Migration[5.0]
     create_table :truck_schedules do |t|
       t.string :truck_id
       t.string :truck_name, :null => false, :references => [:truck, :name]
-      t.string :month
-      t.string :week_day
-      t.string :date_number
+      t.string :start_date
+      t.string :end_date
       t.string :start_time
       t.string :end_time
       t.string :location
