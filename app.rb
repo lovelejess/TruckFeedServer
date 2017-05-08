@@ -71,7 +71,7 @@ class App < Sinatra::Base
   #
   # use http://www.jsonlint.com/ to verify JSON
   #
-  # {"truck_id":"2","truck_name":"The Spot","month":"October", "date": "05/06/17", start_time":"8:00PM","end_time":"10:00PM","location":"BubbaDSM","street_address":"200 10th St","city_state":"Des Moines, IA"}
+  # {"truck_id":"2","truck_name":"The Spot","month":"October", "start_date": "05/06/17", "end_date": "05/06/17" start_time":"8:00PM","end_time":"10:00PM","location":"BubbaDSM","street_address":"200 10th St","city_state":"Des Moines, IA"}
 
   post '/truck/schedules' do
     p 'Received json'
