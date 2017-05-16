@@ -7,17 +7,17 @@ truck_list = [
 ]
 
 truck_schedule_list = [
-    [1, 'The Outside Scoop', 'February', 'Sunday', '3', '2:00PM', '4:00PM', 'Sculpture Garden Park', '1330 Grand Ave', 'Des Moines, IA' ],
-    [1, 'The Outside Scoop', 'February', 'Sunday','3', '4:00PM', '9:00PM', '80/35 Festival', '1330 Grand Ave', 'Des Moines, IA'],
-    [2, 'The Spot','February', 'Monday', '7', '12:00PM', '2:00PM', 'Western Gateway Park', '1330 Grand Ave', 'Des Moines, IA'],
-    [2, 'The Spot','February', 'Monday', '7', '4:00PM', '5:00PM', '515 Brewery', '7700 UNIVERSITY AVE', 'CLIVE, IA']
+    [1, 'The Outside Scoop', '05/06/17', '05/06/17' '2:00PM', '4:00PM', 'Sculpture Garden Park', '1330 Grand Ave', 'Des Moines, IA' ],
+    [1, 'The Outside Scoop', '05/11/17', '05/11/17', '4:00PM', '9:00PM', '80/35 Festival', '1330 Grand Ave', 'Des Moines, IA'],
+    [2, 'The Spot', '05/11/17', '05/11/17', '12:00PM', '2:00PM', 'Western Gateway Park', '1330 Grand Ave', 'Des Moines, IA'],
+    [2, 'The Spot', '05/12/17', '05/13/17', '4:00PM', '1:00AM', '515 Brewery', '7700 UNIVERSITY AVE', 'CLIVE, IA']
     ]
 
 truck_list.each do |name, description_type, image|
   Trucks.create(name: name, description_type: description_type, image_url: image )
 end
 
-truck_schedule_list.each do |truck_id, truck_name, month, week_day, date_number, start_time, end_time, location, street_address, city_state|
-    TruckSchedules.create(truck_id: truck_id, truck_name: truck_name, month: month, week_day: week_day, date_number: date_number, start_time: start_time, end_time: end_time, location: location, street_address: street_address, city_state: city_state)
+truck_schedule_list.each do |truck_id, truck_name, start_date, end_date,  start_time, end_time, location, street_address, city_state|
+    TruckSchedules.create(truck_id: truck_id, truck_name: truck_name, start_date: start_date, end_date: end_date, start_time: start_time, end_time: end_time, location: location, street_address: street_address, city_state: city_state)
 end
 
